@@ -1,4 +1,4 @@
-//Reveal password when icon clicked
+//Reveal password when extension icon clicked
 chrome.browserAction.onClicked.addListener(function(tab) {
 	revealPassword()
 })
@@ -9,8 +9,14 @@ chrome.commands.onCommand.addListener(function(command) {
 	}
 })
 
+//on tab switch
 chrome.tabs.onActivated.addListener(()=>{
-	chrome.browserAction.setIcon({path: "assets/icons/icon16.png"})
+	changeIconToDefault()
+})
+
+//on refresh page
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab)=>{
+	changeIconToDefault()
 })
 
 function revealPassword(){
@@ -22,4 +28,8 @@ function revealPassword(){
 		)
 	})
 	chrome.browserAction.setIcon({path: "assets/icons/icon-revealed.png"})
+}
+
+function changeIconToDefault(){
+	chrome.browserAction.setIcon({path: "assets/icons/icon16.png"})
 }
