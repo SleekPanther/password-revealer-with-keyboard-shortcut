@@ -1,5 +1,3 @@
-let revealed = false	//keeps track of whether the password is currently shown or hidden
-
 //Reveal password when icon clicked
 chrome.browserAction.onClicked.addListener(function(tab) {
 	revealPassword()
@@ -11,6 +9,10 @@ chrome.commands.onCommand.addListener(function(command) {
 	}
 })
 
+chrome.tabs.onActivated.addListener(()=>{
+	chrome.browserAction.setIcon({path: "assets/icons/icon16.png"})
+})
+
 function revealPassword(){
 	revealed = true
 	chrome.tabs.query({active: true, currentWindow: true}, (tabs)=>{
@@ -19,7 +21,5 @@ function revealPassword(){
 			{msg: 'revealPassword'}
 		)
 	})
-	if(revealed){
-		chrome.browserAction.setIcon({path: "assets/icons/icon-revealed.png"})
-	}
+	chrome.browserAction.setIcon({path: "assets/icons/icon-revealed.png"})
 }
