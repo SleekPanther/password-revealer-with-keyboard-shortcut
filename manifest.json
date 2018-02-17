@@ -3,11 +3,11 @@
 	
 	"name": "Password Revealer with Keyboard Shortcut",
 	"description": "View saved passwords with the click of a button",
-	"version": "1.0.0",
-	"version_name": "1.0.0", 
+	"version": "1.0.1",
+	"version_name": "1.0.1", 
 
 	"browser_action": {
-		// "default_icon": "assets/icons/icon.png",
+		"default_icon": "assets/icons/icon16.png",
 		"default_title": "Alt+R (Reveal Password)"
 	},
 	"permissions": [
@@ -30,5 +30,10 @@
 			},
 			"description": "Reveal password in password fields"
 		}
+	},
+	"icons" : {
+		"16" : "assets/icons/icon16.png", 
+		"48" : "assets/icons/icon48.png", 
+		"128": "assets/icons/icon128.png"
 	}
 }
