@@ -3,8 +3,8 @@
 	
 	"name": "Password Revealer with Keyboard Shortcut",
 	"description": "View saved passwords with the click of a button",
-	"version": "1.0.2",
-	"version_name": "1.0.2", 
+	"version": "1.0.3",
+	"version_name": "1.0.3", 
 
 	"browser_action": {
 		"default_icon": "assets/icons/icon16.png",
