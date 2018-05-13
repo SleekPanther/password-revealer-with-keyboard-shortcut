@@ -8,9 +8,8 @@ Just click the extension icon or hit `Alt+R`
 ## Changing the Keyboard Shortcut
 
 The default is `Alt+R` but you can change shortcuts for any chrome extension:
-
-1. Go to More Tools > Extensions ([chrome://extensions/)
+1. Go to More Tools > Extensions (`chrome://extensions/`)
 2. Scroll to the bottom & choose **Keyboard Shortcuts**
-3. 
+3. Find **"Password Revealer with Keyboard Shortcut"** and type in a new shortcut
 
 <img src='images/readme/change-shortcut.gif' width='600'>
