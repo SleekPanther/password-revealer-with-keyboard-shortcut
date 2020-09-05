@@ -48,7 +48,6 @@ function checkIfRevealedAndChangeIcon(){
 			}
 		)
 	})
-
 }
 
 function setIcon(path){
